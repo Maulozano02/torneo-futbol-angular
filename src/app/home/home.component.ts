@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent {
   id!: string;
   name!: string;
+  
 
   constructor(private route: ActivatedRoute) {}
 
