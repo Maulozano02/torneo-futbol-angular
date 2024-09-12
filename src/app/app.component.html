@@ -8,25 +8,9 @@
       <app-torneo-list></app-torneo-list>
     </div>
 
-    <!-- Sección principal con equipos, próximos partidos y resultados -->
+    <!-- Sección principal con contenido dinámico -->
     <div class="col-10">
-      <div class="row">
-        <div class="col-4">
-          <div class="list-container">
-            <app-equipos></app-equipos>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="list-container">
-            <app-proximos-partidos></app-proximos-partidos>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="list-container">
-            <app-resultados></app-resultados>
-          </div>
-        </div>
-      </div>
+      <router-outlet></router-outlet> <!-- Aquí se cargará el contenido dinámico -->
     </div>
   </div>
 </div>

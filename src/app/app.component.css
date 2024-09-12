@@ -16,6 +16,7 @@
   }
   
   .sidebar {
+    width: auto;
     border-right: 1px solid #ccc; /* Agrega un borde derecho a la barra lateral */
     padding-right: 15px; /* Agrega un padding derecho para separar el contenido del borde */
   }

@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './equipos.component.css'
 })
 export class EquiposComponent {
+//  equipos = [
+//   {
+//   id: 909324,
+//   name: 'Tomateros'
+//   },
 
+// ]
 }

@@ -1,12 +1,4 @@
-.sidebar {
-    width: 250px;
-    transition: width 0.3s;
-  }
-  
-  .sidebar.minimized {
-    width: 80px;
-  }
-  
+
   .list-group-item {
     padding: 1rem; /* Ajusta el padding según sea necesario */
   }
