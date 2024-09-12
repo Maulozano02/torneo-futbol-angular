@@ -1,0 +1,7 @@
+<ul *ngIf="leagues$ | async as leagues; else loading">
+    <li *ngFor="let league of leagues">
+      {{ league.name }} <!-- Adjust this based on your actual data structure -->
+    </li>
+  </ul>
+  <ng-template #loading>Loading...</ng-template>
+  

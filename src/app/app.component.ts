@@ -6,11 +6,12 @@ import { EquiposComponent } from './equipos/equipos.component';
 import { ProximosPartidosComponent } from './proximos-partidos/proximos-partidos.component';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { TorneosComponent } from './torneos/torneos.component';
+import { LeagueComponent } from './league/league.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, TorneoListComponent, EquiposComponent, ProximosPartidosComponent, ResultadosComponent, TorneosComponent],
+  imports: [RouterOutlet, NavbarComponent, TorneoListComponent, EquiposComponent, ProximosPartidosComponent, ResultadosComponent, TorneosComponent, LeagueComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
