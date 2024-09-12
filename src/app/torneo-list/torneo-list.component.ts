@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service'; // Adjust the path as needed
 import { Observable } from 'rxjs';
-import { CommonModule } from '@angular/common'; // Import CommonModule
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from "../home/home.component"; // Import CommonModule
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-torneo-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HomeComponent, RouterModule],
   templateUrl: './torneo-list.component.html',
   styleUrls: ['./torneo-list.component.css']
 })

@@ -19,7 +19,9 @@
         </a>
         <ul *ngIf="leagues$ | async as leagues; else loading">
           <span *ngFor="let league of leagues" class="list-group-item list-group-item-action text-center">
-            {{ league.name }}
+            <a [routerLink]="['/home', league.id, league.name]" routerLinkActive="active" class="list-group-item list-group-item-action text-center">
+              {{ league.name }}
+            </a>
           </span>
         </ul>
         <ng-template #loading>Loading...</ng-template>
