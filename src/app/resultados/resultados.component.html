@@ -1,5 +1,16 @@
 <h3>Resultados</h3>
-<ul class="list-group">
-  <li class="list-group-item">Tomateros vs River - 2-0</li>
-  <li class="list-group-item">Leones vs Rayados - 3-2</li>
-</ul>
+<div *ngIf="finishedMatches.length > 0; else noMatches">
+  <div *ngFor="let match of finishedMatches">
+    <p>
+      <strong>{{ match.teams.team1.name }}</strong> {{ match.score.team1 }} - {{ match.score.team2 }}
+      <strong>{{ match.teams.team2.name }}</strong>
+    </p>
+    <p>Final</p>
+    <p>{{ match.startDate | date: 'longDate' }}</p> <!-- Formats the date -->
+  </div>
+</div>
+
+<ng-template #noMatches>
+  <p>No finished matches available.</p>
+</ng-template>
+

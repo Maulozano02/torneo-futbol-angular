@@ -20,4 +20,8 @@ export class ApiService {
   getUpcomingMatches(leagueId: string): Observable<any> {
     return this.http.get(`${this.apiUrl}leagues/${leagueId}/matches/upcoming`);
   }
+
+  getFinishedMatches(leagueId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}leagues/${leagueId}/matches/finished`);
+  }
 }
