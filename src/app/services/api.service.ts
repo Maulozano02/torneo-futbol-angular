@@ -16,8 +16,8 @@ export class ApiService {
     return this.http.get(`${this.apiUrl}leagues`);
   }
 
-  // Example: Send data to Firestore via your Express API
-  /*createTeam(team: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/teams`, team);
-  }*/
+  // Fetch upcoming matches for a specific league
+  getUpcomingMatches(leagueId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}leagues/${leagueId}/matches/upcoming`);
+  }
 }
