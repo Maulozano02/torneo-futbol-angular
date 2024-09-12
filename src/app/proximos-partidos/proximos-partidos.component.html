@@ -1,5 +1,19 @@
-<h3>Próximos Partidos</h3>
-<ul class="list-group">
-  <li class="list-group-item">Leones vs Tomateros - 11 Septiembre, 5 PM</li>
-  <li class="list-group-item">Pumas vs Tigres - 11 Septiembre, 7 PM</li>
-</ul>
+<div *ngIf="upcomingMatches.length > 0; else noMatches" class="container mt-3">
+    <h3>Próximos Partidos</h3>
+    <div class="list-group">
+      <!-- Itera sobre los partidos usando *ngFor -->
+      <div *ngFor="let match of upcomingMatches" class="list-group-item">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5>{{ match.teams.team1.name }} vs {{ match.teams.team2.name }}</h5>
+          <span class="badge bg-primary">{{ match.startDate | date:'medium' }}</span>
+        </div>
+        <p class="mb-1">Lugar: {{ match.place }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Si no hay partidos programados, muestra este mensaje -->
+  <ng-template #noMatches>
+    <p>No hay partidos programados.</p>
+  </ng-template>
+  
