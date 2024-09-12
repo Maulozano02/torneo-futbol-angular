@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-equipos',
   standalone: true,
-  imports: [],
+  imports: [CommonModule], 
   templateUrl: './equipos.component.html',
-  styleUrl: './equipos.component.css'
+  styleUrls: ['./equipos.component.css']
 })
 export class EquiposComponent {
-
+  equipos: string[] = ['Leones', 'Tigres', 'Tomateros']; 
 }

@@ -1,5 +1,6 @@
 <h3>Resultados</h3>
 <ul class="list-group">
-  <li class="list-group-item">Tomateros vs River - 2-0</li>
-  <li class="list-group-item">Leones vs Rayados - 3-2</li>
+  <li class="list-group-item" *ngFor="let resultado of resultados">
+    {{ resultado.equipo1 }} vs {{ resultado.equipo2 }} - {{ resultado.marcador }}
+  </li>
 </ul>
