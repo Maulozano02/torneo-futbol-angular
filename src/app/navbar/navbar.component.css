@@ -1,0 +1,24 @@
+/* Ajusta márgenes y paddings del contenedor */
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+  }
+  
+  /* Ajusta márgenes en el navbar */
+  .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Ajusta espaciado entre los elementos del menú */
+  .nav-item {
+    padding-right: 15px;
+  }
+  
+  /* Opcional: Ajusta la imagen de perfil */
+  .navbar-nav img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
