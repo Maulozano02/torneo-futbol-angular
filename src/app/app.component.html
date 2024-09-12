@@ -4,23 +4,27 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Barra lateral con lista de torneos -->
-    <div class="col-3">
+    <div class="sidebar col-2">
       <app-torneo-list></app-torneo-list>
     </div>
 
     <!-- Sección principal con equipos, próximos partidos y resultados -->
-    <div class="col-9">
+    <div class="col-10">
       <div class="row">
-        <div class="col-6">
-          <app-equipos></app-equipos>
+        <div class="col-4">
+          <div class="list-container">
+            <app-equipos></app-equipos>
+          </div>
         </div>
-        <div class="col-6">
-          <app-proximos-partidos></app-proximos-partidos>
+        <div class="col-4">
+          <div class="list-container">
+            <app-proximos-partidos></app-proximos-partidos>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <app-resultados></app-resultados>
+        <div class="col-4">
+          <div class="list-container">
+            <app-resultados></app-resultados>
+          </div>
         </div>
       </div>
     </div>

@@ -12,13 +12,13 @@
   }
   
   .list-group-item i {
-    font-size: 1.25rem; /* Ajusta el tamaño del icono según sea necesario */
+    font-size: 1.11115rem; /* Ajusta el tamaño del icono según sea necesario */
   }
   
   .list-group-item .item-text {
     display: inline-block;
-    margin-left: 10px;
-    font-size: 1.15rem; /* Ajusta el tamaño del texto según sea necesario */
+    margin-left: 5px;
+    font-size: 1.05rem; /* Ajusta el tamaño del texto según sea necesario */
   }
   
   .sidebar.minimized .item-text {
