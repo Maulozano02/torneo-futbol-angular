@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './torneo-list.component.html',
-  styleUrl: './torneo-list.component.css'
+  styleUrls: ['./torneo-list.component.css'] // Corregido a styleUrls
 })
 export class TorneoListComponent {
 

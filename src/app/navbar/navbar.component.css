@@ -1,24 +1,30 @@
-/* Ajusta márgenes y paddings del contenedor */
-.container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    max-width: 100%;
-  }
-  
-  /* Ajusta márgenes en el navbar */
-  .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  
-  /* Ajusta espaciado entre los elementos del menú */
-  .nav-item {
-    padding-right: 15px;
-  }
-  
-  /* Opcional: Ajusta la imagen de perfil */
-  .navbar-nav img {
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
+.sidebar {
+  width: 250px;
+  transition: width 0.3s;
+}
+.sidebar.minimized {
+  width: 80px;
+}
+
+.list-group-item {
+  padding: 1rem; /* Ajusta el padding según sea necesario */
+}
+
+.list-group-item i {
+  font-size: 1.5rem; /* Ajusta el tamaño del icono según sea necesario */
+}
+
+.list-group-item .item-text {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.sidebar.minimized .item-text {
+  display: none;
+}
+.scorelink {
+  font-size: 2.0rem; /* Ajusta el tamaño del texto según sea necesario */
+  font-family: 'Helvetica Black Oblique', sans-serif; /* Aplica la fuente Helvetica Black Oblique */
+  font-weight: 900; /* Asegura que el texto sea negro */
+  font-style: oblique; /* Aplica el estilo oblique */
+}
