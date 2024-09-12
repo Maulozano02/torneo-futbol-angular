@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent {
   id!: string;
   name!: string;
-  leagueId!: string;
+  
 
   constructor(private route: ActivatedRoute) {}
 
