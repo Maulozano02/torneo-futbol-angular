@@ -24,4 +24,8 @@ export class ApiService {
   getFinishedMatches(leagueId: string): Observable<any> {
     return this.http.get(`${this.apiUrl}leagues/${leagueId}/matches/finished`);
   }
+
+  getTeams(leagueId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}leagues/${leagueId}/teams`);
+  }
 }
