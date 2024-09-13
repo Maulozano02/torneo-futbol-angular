@@ -7,14 +7,17 @@ import { ProximosPartidosComponent } from './proximos-partidos/proximos-partidos
 import { ResultadosComponent } from './resultados/resultados.component';
 import { TorneosComponent } from './torneos/torneos.component';
 import { LeagueComponent } from './league/league.component';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, TorneoListComponent, EquiposComponent, ProximosPartidosComponent, ResultadosComponent, TorneosComponent, LeagueComponent],
+  imports: [RouterOutlet, NavbarComponent, TorneoListComponent, EquiposComponent, ProximosPartidosComponent, ResultadosComponent, TorneosComponent, LeagueComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'torneo-futbol';
+  constructor(public router: Router) {} 
 }
