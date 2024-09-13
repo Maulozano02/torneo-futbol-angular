@@ -24,9 +24,10 @@ h3 {
 
 
 
+
 /* Main section (contenido dinámico) */
 .main-section {
-  padding: 20px;
+  padding: 40px;
   width: 80%; /* Ocupa el 80% del ancho */
   height: calc(100vh - 60px); /* Se ajusta a la altura disponible */
   background-color: #f9f9f9;
@@ -73,5 +74,8 @@ app-navbar {
   .main-section {
       margin-left: 0;
       width: 100%; /* El contenido ocupa todo el ancho en pantallas pequeñas */
+  }
+  .col-2{
+    padding: 0;
   }
 }

@@ -3,56 +3,66 @@
   position: fixed;
   top: 60px; /* Asegúrate de que el sidebar comience después del navbar */
   left: 0;
-  width: auto;
+  width: 20%; /* Sidebar ocupa el 20% del ancho de la pantalla en desktop */
   background-color: #343a40;
   height: calc(100vh - 60px); /* Deja espacio para el navbar */
   transition: width 0.3s ease-in-out;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Asegura que esté detrás del navbar */
-  padding: 25px 0 25px 0;
+  padding: 0 0 25px 0;
 }
 
-
 .offcanvas-body {
-    padding: 0; /* Asegura que no haya padding interno en el cuerpo de la barra lateral */
+  padding: 0; /* Asegura que no haya padding interno en el cuerpo de la barra lateral */
 }
 
 /* List Group Item Styling */
 .list-group-item {
-    padding: 1.25rem;
-    font-size: 1.1rem;
-    color: #adb5bd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  color: #adb5bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .list-group-item:hover {
-    background-color: #495057;
-    color: #fff;
+  background-color: #495057;
+  color: #fff;
 }
 
 .list-group-item.active {
-    background-color: #007bff;
-    color: white;
+  background-color: #007bff;
+  color: white;
 }
 
 .item-text {
-    margin-left: 10px;
-    font-size: 1.1rem;
+  margin-left: 10px;
+  font-size: 1.1rem;
 }
 
-.sidebar.minimized{
-    display: none;
-
+.sidebar.minimized {
+  display: none;
 }
 
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .sidebar {
-      display: none;
+      position: relative; /* Cambia la posición a relative para que no quede fija */
+      top: 0; /* Ajusta la posición del sidebar arriba del contenido */
+      width: 100vw; /* Sidebar ocupa el 100% del ancho */
+      height: auto; /* Permite que la altura crezca según el contenido */
+      box-shadow: none; /* Elimina la sombra en pantallas pequeñas */
+  }
+
+  /* Ajusta el contenido principal debajo del sidebar */
+  .main-section {
+      margin-left: 0; /* Elimina el margen izquierdo */
+      width: 100%; /* El contenido ocupa todo el ancho de la pantalla */
+      padding-top: 20px; /* Añade un padding para que el contenido no quede pegado al sidebar */
   }
 }

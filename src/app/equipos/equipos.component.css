@@ -5,6 +5,9 @@
     padding: 10px 15px;
     margin-bottom: 10px;
     transition: background-color 0.2s, transform 0.2s;
+    display: flex;
+    justify-content: space-between; /* Mantiene el contenido espaciado */
+    align-items: center;
   }
   
   .list-group-item:hover {
@@ -24,26 +27,58 @@
   }
   
   .d-flex {
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
   }
   
   .d-flex .align-items-end {
-    margin-left: auto; /* Alinea los badges a la derecha */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Mantiene los spans alineados a la derecha */
+    justify-content: flex-end;
   }
   
   img {
     margin-right: 15px;
+    max-width: 100%;
+    height: auto;
   }
   
+  .team-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+  }
+  
+  .team-info span {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  /* Media query para pantallas pequeñas */
   @media (max-width: 768px) {
     .list-group-item {
       flex-direction: column;
+      align-items: center; /* Centra el contenido en pantallas pequeñas */
       text-align: center;
     }
   
+    /* Alinea los badges en el centro en pantallas pequeñas */
     .d-flex .align-items-end {
+      align-items: center; /* Cambia a centrado en pantallas pequeñas */
       margin-left: 0;
       margin-top: 10px;
+    }
+  
+    /* Ajusta el tamaño de las imágenes y badges en pantallas pequeñas */
+    .rounded-circle {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 8px;
     }
   }
   
