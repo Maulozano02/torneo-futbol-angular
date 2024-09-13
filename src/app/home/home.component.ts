@@ -35,8 +35,8 @@ export class HomeComponent {
     this.leagueService.deleteLeague(this.id, {}).subscribe({
       next: () => {
         alert('League deleted successfully');
-        this.router.navigate(['/torneos']);
         window.location.reload(); 
+        this.router.navigate(['/torneos']);
       },
       error: (err) => {
         console.error('Error deleting league', err);

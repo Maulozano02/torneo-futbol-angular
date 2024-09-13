@@ -38,6 +38,7 @@ export class TorneosComponent {
         
         // Opcional: Resetear el formulario después de crear el torneo
         this.resetForm();
+        window.location.reload();
       },
       (error) => {
         console.error('Error adding league:', error);
