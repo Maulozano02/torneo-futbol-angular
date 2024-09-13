@@ -10,25 +10,22 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(fondoFinal.png) no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #f5f5f5; /* Cambiado a color de fondo neutral */
 }
 
 .wrapper {
   width: 420px;
-  background: transparent;
-  border: 2px solid rgba(0, 0, 0, .2); /* Adjust border color to match the black aesthetic */
-  backdrop-filter: blur(9px);
-  color: #000; /* Set text color to black */
+  background: white; /* Fondo blanco sólido */
+  border: 2px solid rgba(0, 0, 0, 0.2); /* Borde negro suave */
   border-radius: 12px;
   padding: 30px 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
 .wrapper h1 {
   font-size: 36px;
   text-align: center;
-  color: #000; /* Ensure heading color is black */
+  color: #000;
 }
 
 .wrapper .input-box {
@@ -41,16 +38,16 @@ body {
 .input-box input {
   width: 100%;
   height: 100%;
-  background: transparent;
-  border: 2px solid rgba(0, 0, 0, .2); /* Adjust border color to match the black aesthetic */
+  background: #f5f5f5;
+  border: 2px solid rgba(0, 0, 0, .2);
   border-radius: 40px;
   font-size: 16px;
-  color: #000; /* Set input text color to black */
+  color: #000;
   padding: 20px 45px 20px 20px;
 }
 
 .input-box input::placeholder {
-  color: #000; /* Ensure placeholder text color is black */
+  color: #888; /* Placeholder en gris claro */
 }
 
 .input-box i {
@@ -59,7 +56,7 @@ body {
   top: 30%;
   transform: translate(-50%);
   font-size: 20px;
-  color: #000; /* Set icon color to black */
+  color: #000;
 }
 
 .wrapper .remember-forgot {
@@ -70,12 +67,12 @@ body {
 }
 
 .remember-forgot label input {
-  accent-color: #000; /* Ensure checkbox color is black */
+  accent-color: #000;
   margin-right: 3px;
 }
 
 .remember-forgot a {
-  color: #000; /* Set link color to black */
+  color: #000;
   text-decoration: none;
 }
 
@@ -86,15 +83,31 @@ body {
 .wrapper .btn {
   width: 100%;
   height: 45px;
-  background: #000; /* Set button background to black */
+  background: #000; /* Botón negro */
   border: none;
   outline: none;
   border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-size: 16px;
-  color: #fff; /* Set button text color to white for contrast */
+  color: #fff; /* Texto blanco */
   font-weight: 600;
+}
+
+.wrapper .btn i {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.google-btn {
+  background-color: #4285F4; /* Botón estilo Google */
+}
+
+.google-btn i {
+  color: white; /* Ícono blanco */
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
 }
 
 .wrapper .register-link {
@@ -104,7 +117,7 @@ body {
 }
 
 .register-link p a {
-  color: #000; /* Set link color to black */
+  color: #000;
   text-decoration: none;
   font-weight: 600;
 }
