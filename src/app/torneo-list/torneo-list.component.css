@@ -1,7 +1,7 @@
 /* Sidebar Styling */
 .sidebar {
   position: fixed;
-  top: 60px; /* Asegúrate de que el sidebar comience después del navbar */
+  top: 75px; /* Asegúrate de que el sidebar comience después del navbar */
   left: 0;
   width: 20%; /* Sidebar ocupa el 20% del ancho de la pantalla en desktop */
   background-color: #343a40;
@@ -9,7 +9,7 @@
   transition: width 0.3s ease-in-out;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Asegura que esté detrás del navbar */
-  padding: 0 0 25px 0;
+  padding: 0 0 25spx 0;
 }
 
 .offcanvas-body {

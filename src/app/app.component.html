@@ -1,21 +1,17 @@
-<!-- app.component.html -->
-
 <!-- Conditionally show the navbar and sidebar on specific routes -->
 <div *ngIf="router.url !== '/login' && router.url !== '/sign-up'">
   <!-- Navbar -->
   <app-navbar></app-navbar>
 
   <div class="container-fluid">
-    <div class="row">
-      <!-- Barra lateral con lista de torneos -->
-      <div class="col-2">
-        <app-torneo-list></app-torneo-list>
-      </div>
+    <!-- Sidebar and main section are now direct siblings -->
+    <div id="sidebar" class="sidebar col-2">
+      <app-torneo-list></app-torneo-list>
+    </div>
 
-      <!-- Sección principal con contenido dinámico -->
-      <div class="col-10 main-section">
-        <router-outlet></router-outlet> <!-- Aquí se cargará el contenido dinámico -->
-      </div>
+    <!-- Sección principal con contenido dinámico -->
+    <div id="main-section" class="main-section col-10">
+      <router-outlet></router-outlet> <!-- Aquí se cargará el contenido dinámico -->
     </div>
   </div>
 </div>
