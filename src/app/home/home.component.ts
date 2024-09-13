@@ -4,11 +4,12 @@ import { ProximosPartidosComponent } from '../proximos-partidos/proximos-partido
 import { ResultadosComponent } from '../resultados/resultados.component';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { AddTeamsComponent } from '../add-teams/add-teams.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [EquiposComponent, ProximosPartidosComponent, ResultadosComponent, RouterModule],
+  imports: [EquiposComponent, ProximosPartidosComponent, ResultadosComponent, RouterModule, AddTeamsComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
