@@ -1,12 +1,11 @@
 <div *ngIf="upcomingMatches.length > 0; else noMatches" class="container mt-3">
-    <h3>Próximos Partidos</h3>
     <div class="list-group">
       <!-- Itera sobre los partidos usando *ngFor -->
       <div *ngFor="let match of upcomingMatches" class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
           <h5>{{ match.teams.team1.name }} vs {{ match.teams.team2.name }}</h5>
-          <span class="badge bg-primary">{{ match.startDate | date:'medium' }}</span>
         </div>
+        <span class="badge bg-primary">{{ match.startDate | date:'medium' }}</span>
         <p class="mb-1">Lugar: {{ match.place }}</p>
       </div>
     </div>

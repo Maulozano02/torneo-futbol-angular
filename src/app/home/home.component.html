@@ -1,20 +1,35 @@
-<div class="col-10">
-  <h1>League: {{ name }}</h1>
+<div class="container-fluid">
+    <h1 class="mb-4">League: {{ name }}</h1>
     <div class="row">
-      <div class="col-4">
-        <div class="list-container">
-          <app-equipos [leagueId]="id"></app-equipos>
+      <!-- Equipos -->
+      <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Equipos</h5>
+            <app-equipos [leagueId]="id"></app-equipos>
+          </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="list-container">
-            <app-proximos-partidos [leagueId]="id"></app-proximos-partidos>  <!-- Pasamos el id de la liga -->
+  
+      <!-- Próximos Partidos -->
+      <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Próximos Partidos</h5>
+            <app-proximos-partidos [leagueId]="id"></app-proximos-partidos>
+          </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="list-container">
-          <app-resultados [leagueId]="id"></app-resultados>
+  
+      <!-- Resultados -->
+      <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Resultados</h5>
+            <app-resultados [leagueId]="id"></app-resultados>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  

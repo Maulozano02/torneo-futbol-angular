@@ -1,3 +1,26 @@
 .sidebar.minimized .item-text {
     display: none;
   }
+  .container-fluid {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .list-container {
+    padding: 10px;
+  }
+  
