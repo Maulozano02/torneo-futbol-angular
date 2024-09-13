@@ -41,4 +41,9 @@
   .rounded-btn:hover {
     background-color: #0056b3; /* Change color on hover (optional) */
   }
-  
+  .top-right {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    right: 10px;
+  }

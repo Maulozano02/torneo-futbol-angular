@@ -59,4 +59,20 @@ export class ApiService {
     });
     return this.http.post(url, body, { headers, responseType: 'text' as 'json' });
   }
+
+  postMatch(leagueId: string, body: any): Observable<any> {
+    const url = `${this.apiUrl}leagues/${leagueId}/teams`;
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    return this.http.post(url, body, { headers, responseType: 'text' as 'json' });
+  }
+
+  deleteLeague(leagueId: string, body: any): Observable<any> {
+    const url = `${this.apiUrl}leagues/${leagueId}`;
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    return this.http.delete(url, { headers, responseType: 'text' as 'json' });
+  }
 }
