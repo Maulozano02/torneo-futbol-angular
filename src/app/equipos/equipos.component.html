@@ -1,6 +1,10 @@
 <h3>Equipos</h3>
-<ul class="list-group">
-  <li class="list-group-item">Leones</li>
-  <li class="list-group-item">Tigres</li>
-  <li class="list-group-item">Tomateros</li>
-</ul>
+<div *ngIf="equipos.length > 0; else noTeams">
+  <div *ngFor="let equipo of equipos">
+    <h3>{{ equipo.name }}</h3>
+  </div>
+</div>
+
+<ng-template #noTeams>
+  <p>No teams available.</p>
+</ng-template>
