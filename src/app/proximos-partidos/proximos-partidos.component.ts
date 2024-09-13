@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';  // Asegúrate de importar CommonModule
 import { ApiService } from '../services/api.service';
 
@@ -9,26 +9,26 @@ import { ApiService } from '../services/api.service';
   templateUrl: './proximos-partidos.component.html',
   styleUrls: ['./proximos-partidos.component.css']
 })
-export class ProximosPartidosComponent implements OnInit {
+export class ProximosPartidosComponent implements OnChanges {
   @Input() leagueId!: string;
   upcomingMatches: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
-    this.loadUpcomingMatches();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['leagueId'] && this.leagueId) {
+      this.getUpcomingMatches(this.leagueId);
+    }
   }
 
-  loadUpcomingMatches(): void {
-    if (this.leagueId) {
-      this.apiService.getUpcomingMatches(this.leagueId).subscribe({
-        next: (matches) => {
-          this.upcomingMatches = matches;
-        },
-        error: (error) => {
-          console.error('Error fetching upcoming matches:', error);
-        }
-      });
-    }
+  getUpcomingMatches(leagueId: string): void {
+    this.apiService.getUpcomingMatches(leagueId).subscribe(
+      (data) => {
+        this.upcomingMatches = data;
+      },
+      (error) => {
+        console.error('Error fetching upcoming matches:', error);
+      }
+    );
   }
 }

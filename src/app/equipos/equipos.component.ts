@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { ApiService } from '../services/api.service'; // Adjust the path to your ApiService
 import { CommonModule } from '@angular/common';
 
@@ -9,14 +9,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './equipos.component.html',
   styleUrls: ['./equipos.component.css'] // Fix typo: styleUrl -> styleUrls
 })
-export class EquiposComponent implements OnInit {
-  @Input() leagueId!: string; // Input decorator to receive leagueId from parent
+export class EquiposComponent implements OnChanges {
+  @Input() leagueId!: string;
   equipos: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
-    if (this.leagueId) {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['leagueId'] && this.leagueId) {
       this.getTeams(this.leagueId);
     }
   }
@@ -24,7 +24,7 @@ export class EquiposComponent implements OnInit {
   getTeams(leagueId: string): void {
     this.apiService.getTeams(leagueId).subscribe(
       (data) => {
-        this.equipos = data; // Populate equipos with API response
+        this.equipos = data; // Assuming data is an array of teams
       },
       (error) => {
         console.error('Error fetching teams:', error);

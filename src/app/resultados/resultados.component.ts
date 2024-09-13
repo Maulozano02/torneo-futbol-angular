@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ApiService } from '../services/api.service'; // Adjust path to your ApiService
-import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,16 +7,17 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './resultados.component.html',
-  styleUrls: ['./resultados.component.css'] // Fix typo: styleUrl -> styleUrls
+  styleUrls: ['./resultados.component.css']
 })
-export class ResultadosComponent implements OnInit {
+export class ResultadosComponent implements OnChanges {
   @Input() leagueId!: string; // Input decorator to receive leagueId from parent
   finishedMatches: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
-    if (this.leagueId) {
+  // React to changes in the leagueId input
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['leagueId'] && this.leagueId) {
       this.getFinishedMatches(this.leagueId);
     }
   }
@@ -33,3 +33,4 @@ export class ResultadosComponent implements OnInit {
     );
   }
 }
+
