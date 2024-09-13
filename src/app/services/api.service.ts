@@ -40,4 +40,13 @@ export class ApiService {
 
     return this.http.post(url, body, { headers, responseType: 'text' as 'json' });
   }
+  postTeam(leagueId: string, body: any): Observable<any> { 
+    const url = `${this.apiUrl}leagues/${leagueId}/teams`;
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json', // Set appropriate headers for your API
+    });
+
+    return this.http.post(url, body, { headers, responseType: 'text' as 'json' });
+  }
 }
