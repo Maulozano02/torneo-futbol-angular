@@ -1,0 +1,10 @@
+.weather-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-icon {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-left: 1px; /* Espacio entre el texto y la imagen */
+  }

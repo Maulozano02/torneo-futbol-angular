@@ -1,18 +1,19 @@
 <div *ngIf="upcomingMatches.length > 0; else noMatches" class="container mt-3">
-    <div class="list-group">
-      <!-- Itera sobre los partidos usando *ngFor -->
-      <div *ngFor="let match of upcomingMatches" class="list-group-item">
-        <div class="d-flex justify-content-between align-items-center">
-          <h5>{{ match.teams.team1.name }} vs {{ match.teams.team2.name }}</h5>
-        </div>
-        <span class="badge bg-primary">{{ match.startDate | date:'medium' }}</span>
-        <p class="mb-1">Lugar: {{ match.place }}</p>
+  <div class="list-group">
+    <div *ngFor="let match of upcomingMatches" class="list-group-item">
+      <div class="d-flex justify-content-between align-items-center">
+        <h5>{{ match.teams.team1.name }} vs {{ match.teams.team2.name }}</h5>
       </div>
+      <span class="badge bg-primary">{{ match.startDate | date:'medium' }}</span>
+      <p class="mb-1">Lugar: {{ match.place }}</p>
+      <p class="weather-info">
+        Clima en Monterrey: {{ weather.condition.text }} ({{ weather.temp_c }}°C)
+        <img [src]="'https:' + weather.condition.icon" alt="Weather Icon" class="weather-icon" />
+      </p>
     </div>
   </div>
-  
-  <!-- Si no hay partidos programados, muestra este mensaje -->
-  <ng-template #noMatches>
-    <p>No hay partidos programados.</p>
-  </ng-template>
-  
+</div>
+
+<ng-template #noMatches>
+  <p>No hay partidos programados.</p>
+</ng-template>
