@@ -6,11 +6,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { AddTeamsComponent } from '../add-teams/add-teams.component';
 import { ApiService } from '../services/api.service'; 
+import { MatDialog } from '@angular/material/dialog';
+import { CreateMatchComponent } from '../create-match/create-match.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [EquiposComponent, ProximosPartidosComponent, ResultadosComponent, RouterModule, AddTeamsComponent],
+  imports: [EquiposComponent, ProximosPartidosComponent, ResultadosComponent, RouterModule, AddTeamsComponent, CreateMatchComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -19,7 +22,7 @@ export class HomeComponent {
   name!: string;
   
 
-  constructor(private route: ActivatedRoute, private leagueService: ApiService, private router: Router) {}
+  constructor(private route: ActivatedRoute, private leagueService: ApiService, private router: Router, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     // Subscribe to changes in route parameters
@@ -40,4 +43,16 @@ export class HomeComponent {
       }
     });
   }
+openCreateMatchDialog(): void {
+  console.log('Opening CreateMatch dialog with leagueId:', this.id);
+  const dialogRef = this.dialog.open(CreateMatchComponent, {
+    width: '400px',
+    data: { leagueId: this.id }
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+  });
+}
+
 }

@@ -22,6 +22,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card shadow-sm mb-4">
           <div class="card-body">
+            <button mat-button (click)="openCreateMatchDialog()">Create Match</button>
             <h5 class="card-title">Próximos Partidos</h5>
             <app-proximos-partidos [leagueId]="id"></app-proximos-partidos>
           </div>
