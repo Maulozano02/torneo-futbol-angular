@@ -10,7 +10,7 @@
   .list-group-item .item-text {
     display: inline-block;
     margin-left: 5px;
-    font-size: 1.05rem; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 1rem; /* Ajusta el tamaño del texto según sea necesario */
   }
   
   .sidebar.minimized .item-text {

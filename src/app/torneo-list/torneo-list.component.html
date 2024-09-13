@@ -5,21 +5,21 @@
           <i class="bi bi-house"></i> 
           <span class="item-text">Home</span>
         </a>
-        <a routerLink="/partidos" class="list-group-item list-group-item-action text-center">
+        <!-- <a routerLink="/partidos" class="list-group-item list-group-item-action text-center">
           <i class="bi bi-list-check"></i> 
           <span class="item-text">Partidos</span>
         </a>
         <a routerLink="/miembros" class="list-group-item list-group-item-action text-center">
           <i class="bi bi-people-fill"></i> 
           <span class="item-text">Miembros</span>
-        </a>
+        </a> -->
         <a href="../torneos"routerLinkActive="active" class="list-group-item list-group-item-action text-center">
           <i class="bi bi-plus-square ms-2"></i> 
           <span class="item-text">Torneos</span>
         </a>
-        <ul *ngIf="leagues$ | async as leagues; else loading">
+        <ul *ngIf="leagues$ | async as leagues; else loading" class="list-group list-group-flush p-0">
           <span *ngFor="let league of leagues" class="list-group-item list-group-item-action text-center">
-            <a [routerLink]="['/home', league.id, league.name]" routerLinkActive="active" class="list-group-item list-group-item-action text-center">
+            <a [routerLink]="['/home', league.id, league.name]" routerLinkActive="active" class="text-muted  text-decoration-none">
               {{ league.name }}
             </a>
           </span>
