@@ -1,0 +1,14 @@
+<div class="popup-overlay" *ngIf="isVisible">
+    <div class="popup">
+      <p>Add New Team</p>
+      <form (ngSubmit)="submitTeam()">
+        <div>
+          <label for="teamName">Team Name:</label>
+          <input type="text" id="teamName" [(ngModel)]="teamName" name="teamName" required />
+        </div>
+        <button class="rounded-btn" type="submit">Add Team</button>
+        <button class="rounded-btn" style="background-color: red" type="button" (click)="closePopup()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  
