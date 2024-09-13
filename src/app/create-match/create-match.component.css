@@ -1,0 +1,78 @@
+/* Center the form and give it a nice container */
+mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Style the form field elements */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Form container to control width */
+  form {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Style the dialog title */
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the mat-select dropdowns */
+  mat-select {
+    width: 100%;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    width: 100%;
+    background-color: #3f51b5; /* Material primary color */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #303f9f; /* Darker shade on hover */
+  }
+  
+  /* Add some spacing between the elements */
+  .mat-form-field {
+    margin-bottom: 20px;
+  }
+  
+  /* Date picker input style */
+  input[matInput] {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Control the width of the dialog */
+  mat-dialog-content {
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  /* Make sure mobile is well supported */
+  @media (max-width: 600px) {
+    form {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  

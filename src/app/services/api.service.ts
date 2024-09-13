@@ -61,7 +61,7 @@ export class ApiService {
   }
 
   postMatch(leagueId: string, body: any): Observable<any> {
-    const url = `${this.apiUrl}leagues/${leagueId}/teams`;
+    const url = `${this.apiUrl}leagues/${leagueId}/matches`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
