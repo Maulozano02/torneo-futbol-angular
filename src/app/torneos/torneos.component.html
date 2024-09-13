@@ -1,34 +1,28 @@
-<form>
-    <div class="mb-3">
-      <label for="leagueName" class="form-label">Nombre de la Liga</label>
-      <input type="text" class="form-control" id="leagueName" placeholder="Ingresa el nombre de la liga">
-    </div>
-  
-    <div class="mb-3">
-      <label for="category" class="form-label">Categoría</label>
-      <select class="form-select" id="category">
-        <option selected>Elige una categoría</option>
-        <option value="1">Primera División</option>
-        <option value="2">Segunda División</option>
-        <option value="3">Tercera División</option>
-      </select>
-    </div>
-  
-    <div class="mb-3">
-      <label for="startDate" class="form-label">Fecha de Inicio</label>
-      <input type="date" class="form-control" id="startDate">
-    </div>
-  
-    <div class="mb-3">
-      <label for="description" class="form-label">Descripción de la Liga</label>
-      <textarea class="form-control" id="description" rows="3" placeholder="Descripción breve de la liga"></textarea>
-    </div>
-  
-    <div class="mb-3">
-      <label for="teamsNumber" class="form-label">Número de Equipos</label>
-      <input type="number" class="form-control" id="teamsNumber" placeholder="Ingresa el número de equipos">
-    </div>
-  
-    <button type="submit" class="btn btn-primary">Agregar Liga</button>
-  </form>
-  
+<form (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre del Torneo</label>
+    <input type="text" class="form-control" id="name" placeholder="Ingresa el nombre del torneo" [(ngModel)]="league.name" name="name" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="startDate" class="form-label">Fecha de Inicio</label>
+    <input type="date" class="form-control" id="startDate" [(ngModel)]="league.startDate" name="startDate" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="endDate" class="form-label">Fecha de Fin</label>
+    <input type="date" class="form-control" id="endDate" [(ngModel)]="league.endDate" name="endDate" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Descripción del Torneo</label>
+    <textarea class="form-control" id="description" rows="3" placeholder="Descripción breve del torneo" [(ngModel)]="league.description" name="description" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="teamsNumber" class="form-label">Número de Equipos</label>
+    <input type="number" class="form-control" id="teamsNumber" placeholder="Ingresa el número de equipos" [(ngModel)]="league.teamsNumber" name="teamsNumber" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Agregar Torneo</button>
+</form>
