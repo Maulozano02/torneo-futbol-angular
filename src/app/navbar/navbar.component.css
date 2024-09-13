@@ -1,5 +1,19 @@
 
-  
+  /* Navbar Styling */
+.navbar {
+    position: fixed; /* Mantiene la barra en la parte superior */
+    top: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    z-index: 1050; /* Más alto que el sidebar para que esté encima */
+    background-color: #f8f9fa; /* Fondo claro para la barra de navegación */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras para darle un efecto flotante */
+}
+
+/* Ajusta el margen superior para el contenido */
+.content-wrapper {
+    margin-top: 60px; /* Deja espacio para el navbar, ajusta este valor según la altura del navbar */
+}
+
 .list-group-item {
   padding: 1rem; /* Ajusta el padding según sea necesario */
 }

@@ -1,44 +1,77 @@
+/* Estilo general */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .container-fluid {
-    margin-top: 20px;
+  padding-top: 15vh; /* Asegura que el contenido comience debajo del navbar */
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.list-group {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  text-align: center;
+}
+
+
+
+/* Main section (contenido dinámico) */
+.main-section {
+  padding: 20px;
+  width: 80%; /* Ocupa el 80% del ancho */
+  height: calc(100vh - 60px); /* Se ajusta a la altura disponible */
+  background-color: #f9f9f9;
+  overflow-y: auto; /* Scroll si es necesario */
+}
+
+/* Navbar */
+app-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Altura del navbar */
+  background-color: #f8f9fa;
+  z-index: 1050;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para que destaque */
+}
+
+/* Contenedores con listas */
+.list-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.list-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.list-container ul li {
+  margin-bottom: 10px;
+}
+/* Cuando el sidebar esté minimizado */
+.sidebar.minimized + .main-section {
+  margin-left: 0;
+  width: 100%; /* El contenido ocupa todo el ancho */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+  .main-section {
+      margin-left: 0;
+      width: 100%; /* El contenido ocupa todo el ancho en pantallas pequeñas */
   }
-  
-  h3 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .list-group {
-    margin-bottom: 20px;
-  }
-  
-  .list-group-item {
-    text-align: center;
-  }
-  
-  .sidebar {
-    width: 15%;
-    border-right: 1px solid #ccc; /* Agrega un borde derecho a la barra lateral */
-    padding-right: 15px; /* Agrega un padding derecho para separar el contenido del borde */
-  }
-  
-  .col-10 {
-    padding-left: 15px; /* Agrega un padding izquierdo para separar el contenido del borde */
-  }
-  
-  .list-container {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .list-container ul {
-    list-style-type: disc; /* Estilo de lista con bullet points */
-    padding-left: 20px;
-  }
-  
-  .list-container ul li {
-    margin-bottom: 10px;
-  }
+}

@@ -1,34 +1,28 @@
-<div id="sidebar" class="sidebar expanded">
+<div id="sidebar" class="sidebar bg-dark text-light expanded">
     <div class="offcanvas-body p-0">
-      <div class="list-group list-group-flush">
-        <a href="../home" routerLinkActive="active" class="list-group-item list-group-item-action text-center">
-          <i class="bi bi-house"></i> 
-          <span class="item-text">Home</span>
-        </a>
-        <!-- <a routerLink="/partidos" class="list-group-item list-group-item-action text-center">
-          <i class="bi bi-list-check"></i> 
-          <span class="item-text">Partidos</span>
-        </a>
-        <a routerLink="/miembros" class="list-group-item list-group-item-action text-center">
-          <i class="bi bi-people-fill"></i> 
-          <span class="item-text">Miembros</span>
-        </a> -->
-        <a href="../torneos"routerLinkActive="active" class="list-group-item list-group-item-action text-center">
-          <i class="bi bi-plus-square ms-2"></i> 
-          <span class="item-text">Torneos</span>
-        </a>
-        <ul *ngIf="leagues$ | async as leagues; else loading" class="list-group list-group-flush p-0">
-          <span *ngFor="let league of leagues" class="list-group-item list-group-item-action text-center">
-            <a [routerLink]="['/home', league.id, league.name]" routerLinkActive="active" class="text-muted  text-decoration-none">
-              {{ league.name }}
+        <div class="list-group list-group-flush">
+            <a href="../home" routerLinkActive="active" class="list-group-item list-group-item-action text-center bg-dark text-light border-0">
+                <i class="bi bi-house"></i> 
+                <span class="item-text">Home</span>
             </a>
-          </span>
-        </ul>
-        <ng-template #loading>Loading...</ng-template>
-        
-      </div>
+            <a href="../torneos" routerLinkActive="active" class="list-group-item list-group-item-action text-center bg-dark text-light border-0">
+                <i class="bi bi-plus-square ms-2"></i> 
+                <span class="item-text">Torneos</span>
+            </a>
+            <ul *ngIf="leagues$ | async as leagues; else loading" class="list-group list-group-flush p-0">
+                <span *ngFor="let league of leagues" class="list-group-item list-group-item-action text-center bg-dark text-light border-0">
+                    <a [routerLink]="['/home', league.id, league.name]" routerLinkActive="active" class="text-light text-decoration-none">
+                        {{ league.name }}
+                    </a>
+                </span>
+            </ul>
+            <ng-template #loading>
+                <div class="text-center py-3">
+                    <div class="spinner-border text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
     </div>
-  </div>
-  
-
-  
+</div>

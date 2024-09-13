@@ -1,18 +1,58 @@
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Asegúrate de que el sidebar comience después del navbar */
+  left: 0;
+  width: auto;
+  background-color: #343a40;
+  height: calc(100vh - 60px); /* Deja espacio para el navbar */
+  transition: width 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegura que esté detrás del navbar */
+  padding: 25px 0 25px 0;
+}
 
-  .list-group-item {
-    padding: 1rem; /* Ajusta el padding según sea necesario */
-  }
-  
-  .list-group-item i {
-    font-size: 1.11115rem; /* Ajusta el tamaño del icono según sea necesario */
-  }
-  
-  .list-group-item .item-text {
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 1rem; /* Ajusta el tamaño del texto según sea necesario */
-  }
-  
-  .sidebar.minimized .item-text {
+
+.offcanvas-body {
+    padding: 0; /* Asegura que no haya padding interno en el cuerpo de la barra lateral */
+}
+
+/* List Group Item Styling */
+.list-group-item {
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    color: #adb5bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.list-group-item:hover {
+    background-color: #495057;
+    color: #fff;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.item-text {
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.sidebar.minimized{
     display: none;
+
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      display: none;
   }
+}
